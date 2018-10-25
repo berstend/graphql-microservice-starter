@@ -1,6 +1,6 @@
 # simple-example
 
-- Showcases how to use **independent GraphQL services with automatic schema stitching**, to power a unified backend
+- Shows how to use **independent GraphQL services with automatic schema stitching**, to power a unified backend
 - Everything is derived from a standard `.graphqlconfig.yml`, as single source of truth
 - All services expose an executable schema that will be stitched together by `src/utils/schema.ts`
 - Strongly typed bindings are generated automatically and can be used within services to get data from another
