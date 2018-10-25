@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint-config-standard", "tslint-config-prettier"],
+  "rules": {
+    "space-before-function-paren": [true, "always"],
+    "ordered-imports": true
+  },
+  "linterOptions": {
+    "exclude": ["**/generated/*.ts", "**/_generated/*.ts"]
+  }
+}

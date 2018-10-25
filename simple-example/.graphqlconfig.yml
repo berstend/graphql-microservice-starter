@@ -1,0 +1,60 @@
+projects:
+  # Dummy entry, mostly intended for graphql playground
+  public:
+    schemaPath: src/services/_generated/public/schema.graphql
+    extensions:
+      merge: false
+      endpoints:
+        default: 'http://localhost:4000/graphql'
+
+  countries:
+    # Generated schema
+    schemaPath: 'src/services/countries/_generated/schema.graphql'
+    extensions:
+      # Used to automatically fetch the schema and for binding
+      endpoints:
+        default: 'https://countries.trevorblades.com/'
+      codegen:
+        # Executable schema
+        input: 'src/services/countries/schema.ts'
+        generator: graphql-binding
+        language: typescript
+        output:
+          binding: 'src/services/countries/_generated/binding.ts'
+
+  mocked:
+    # Hand written schema
+    schemaPath: 'src/services/mocked/schema.graphql'
+    extensions:
+      konvolut:
+        public: true # Merge this schema
+      codegen:
+        input: 'src/services/mocked/schema.ts'
+        generator: graphql-binding
+        language: typescript
+        output:
+          binding: 'src/services/mocked/_generated/binding.ts'
+
+  xkcd:
+    # Hand written schema
+    schemaPath: 'src/services/xkcd/schema.graphql'
+    extensions:
+      # Generate code binding
+      codegen:
+        input: 'src/services/xkcd/schema.ts'
+        generator: graphql-binding
+        language: typescript
+        output:
+          binding: 'src/services/xkcd/_generated/binding.ts'
+
+  binding-test:
+    # Hand written schema
+    schemaPath: 'src/services/binding-test/schema.graphql'
+    extensions:
+      # Generate code binding
+      codegen:
+        input: 'src/services/binding-test/schema.ts'
+        generator: graphql-binding
+        language: typescript
+        output:
+          binding: 'src/services/binding-test/_generated/binding.ts'

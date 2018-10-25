@@ -1,0 +1,17 @@
+type MockObject {
+  name: String
+  title: String
+  age: Int
+  languages: [String]
+}
+
+type Query {
+  mockedString: String
+  mockedAge: Int
+  mockedObject: MockObject
+}
+
+type Query {
+  "Return a couple of mocked objects"
+  getMockedObjects: [MockObject]
+}

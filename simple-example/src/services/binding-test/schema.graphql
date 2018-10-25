@@ -1,0 +1,8 @@
+type Query {
+  getComicAndCountry: ComicWithCountry
+}
+
+type ComicWithCountry {
+  comic: String!
+  country: String!
+}
