@@ -6,7 +6,7 @@ This repo aims to provide clean starters, as a lot is happening in this space wh
 
 ## Starters
 
-### simple-example
+### [simple-example](./simple-example/)
 
 - Showcases how to use **independent GraphQL services with automatic schema stitching**, to power a unified backend
 - Everything is derived from a standard `.graphqlconfig.yml`, as single source of truth
